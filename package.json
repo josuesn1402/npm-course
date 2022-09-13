@@ -1,0 +1,24 @@
+{
+  "name": "npm-course",
+  "version": "1.0.0",
+  "description": "Construir un paquete para Nodejs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josueSN1402/npm-course.git"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "package"
+  ],
+  "author": "Josue Sanchez Nima <josue.sanchez.n1402@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josueSN1402/npm-course/issues"
+  },
+  "homepage": "https://github.com/josueSN1402/npm-course#readme"
+}

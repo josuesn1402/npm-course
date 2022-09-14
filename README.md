@@ -187,6 +187,74 @@ Existen dos símbolos que acompañan a este versionado, que sirven para actualiz
 ```
 
 
+## Apartado de "scripts" en package.json
+Indica los comandos a ejecutar del proyecto.
+
+### Crear comando
+Los comandos se crean con la siguiente estructura dentro del `package.json`:
+
+```json
+{
+    "scripts": {
+        "<name>": "<comand>"
+    }
+}
+```
+* **name**	: Nombre del comando (tiene que ser descriptivo).
+* **comand**  : Comando que se ejecutarpar en la terminal.
+
+Se ejecutan usando `npm run <script-name>`.
+
+```json
+{
+    "scripts": {
+		"dev": "webpack-dev-server --mode development",
+		"build": "webpack --mode production",
+		"start": "serve ./dist -s -l 8080"
+    }
+}
+```
+* **dev**  : Modo desarrollo.
+* **build**: Compila todo y me crea un directorio dist.
+* **start**: Toma el directorio dist y lanzo un servidor en modo producción.
+
+[Fuente](https://platzi.com/comentario/883390/)
+
+```
+$ npm run start
+$ npm run build
+$ npm run deploy
+```
+
+### Scripts con "pre" y "post" 
+Al especificar "pre" en un script, este se ejecutará automáticamente antes del comando que ejecutaste. 
+Por ejemplo, si defines el comando `build` y `prebuild`, cuando corras `npm run build` el comando `prebuild` se ejecutará primero.
+Esto sirbe para poder ejecutar tareas que hagan algún tipo de preparación necesaria para correr el comando principal. Sin embargo, hay que hacer notar que si el comando pre falla (retorna un valor que no es 0) el comando principal no se ejecutará. Esto es algo bueno ya que si nuestro proceso de preparación no se realiza de forma exitosa, puede que tengamos problemas al querer ejecutar la tarea principal.
+
+En algunas ocaciones, sin embargo, la tarea previa puede fallar sin que eso afecte la ejecución de la tarea principal. En esos casos puedes usar `|| exit 0` para retornar 0:
+
+```json
+	"presass-build": "(rm css/*.css; rm css/*.css.map) || exit 0"
+```
+
+En este, `rm` puede fallar si el directorio **css** está vacio, y en ese caso no hay problema, la tarea principal puede funcionar sin ningún problema ya que `presass-build` tiene el propósito de vaciar ese directorio.
+
+
+Video de referencia sobre "post": https://www.youtube.com/watch?v=kwn7tHJJoLA
+
+[Fuente](https://platzi.com/comentario/885229/)
+
+
+### Listar scripts
+También es posible utilizar el comando `ntl` (npm task list) para utilizar un menú de texto y seleccionar la tarea de una forma más interactiva. 
+Para ello, sólo tenemos que escribir `npx ntl`
+
+[Fuente](https://lenguajejs.com/npm/administracion/scripts-de-npm/)
+
+
+> NOTA: para problemas de webkpack al ejecutar `build` o `start`:  
+>* Revisar este repo: https://github.com/webpack/webpack/issues/14532  
+>* O probar este comando: `export NODE_OPTIONS=--openssl-legacy-provider`
 
 
 

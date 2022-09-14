@@ -19,14 +19,18 @@ El archivo `package.json` estaría estructurado inicialmente por las siguientes 
 
 ## Inicialización del package.json
 
-$ `npm init`:	 Genera de manual el package, pidiendo los valores para la información de nuestro proyecto.
+$ `npm init`:	Genera de manual el package, pidiendo los valores para la información de nuestro proyecto.
+
 $ `npm init -y`: Autogenera el archivo con las configuaraciones mínimas.
 
 
 ### Declaración de valores por defecto
-$ `npm set init.author.email <email>`:	 Establece nombre por defecto del autor
-$ `npm set init.author.name <name>`:	 Establece correo electrónico por defecto del autor
+$ `npm set init.author.email <email>`: Establece nombre por defecto del autor
+
+$ `npm set init.author.name <name>`: Establece correo electrónico por defecto del autor
+
 $ `npm set init.license <license name>`: Establece licencia por defecto que tendran los proyectos
+
 
 > Al ejecutar `npm init -y` el archivo se creará con los valores que se le preestableca.
 
@@ -34,42 +38,52 @@ $ `npm set init.license <license name>`: Establece licencia por defecto que tend
 
 ## Instalación de dependencias
 Las dependencias y paquetes son recursos que vamos a utilizar en nuestro proyecto, el conjunto de módulos para resolver un problema mayor.
+
 Estás deben instalarse en la carpeta raíz del proyecto.
 
 > 💡 Más información sobre `npm install`: https://docs.npmjs.com/cli/v8/commands/npm-install
 
 
 $ `npm i <pkg>` | `npm install <pkg>` | `npm install <pkg> --save` | `npm install <pkg> -S`:
-	Instala un paquete, por defecto se instalara como dependecia requeridas para el funcionamiento del proyecto, por lo que no es necesario colocar `--save`. Colocar `i` o `install` es lo mismo, al igual que `--save` y `-S`.
+
+Instala un paquete, por defecto se instalara como dependecia requeridas para el funcionamiento del proyecto, por lo que no es necesario colocar `--save`. Colocar `i` o `install` es lo mismo, al igual que `--save` y `-S`.
 
 $ `npm install <pkg> --save-dev` | `npm install <pkg> -D`:
-	Instala los paquetes como dependecias de desarrollo, que no serán pasadas a producción.
+
+Instala los paquetes como dependecias de desarrollo, que no serán pasadas a producción.
 
 $ `npm install <pkg> -O`:
-	Con este comando podemos instalar de manera opcional un paquete.
+
+Con este comando podemos instalar de manera opcional un paquete.
 
 $ `npm install --save-exact <pkg>` | `npm i -E <pkg>`:
-	Instala nuestras dependencias a utilizar con una versión exacta.
+
+Instala nuestras dependencias a utilizar con una versión exacta.
 
 $ `npm install <pkg> -g`:
-	Instala globalmente un paquete, puede ser instalado en diferentes proyectos. Puede que puda permisos de administrador.
 
-	> 💡 Evitar que solicite permisos de administrador https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
+Instala globalmente un paquete, puede ser instalado en diferentes proyectos. Puede que puda permisos de administrador.
 
-$ `npm list`:	Lista los paquetes del proyecto.
+> 💡 Evitar que solicite permisos de administrador https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
 
-$ `npm list -g --depth 0`:	Lista los paquetes instalos globalmente
+$ `npm list`: Lista los paquetes del proyecto.
 
-	> 💡 La dependencia `nodemon` instala un 'Demonio' (Un servicio que corre en segundo plano en el sistema), este se encargará de detectar los cambios que hagamos en un archivo y actualizar el puerto en `localhost` automaticamente
+$ `npm list -g --depth 0`:
+Lista los paquetes instalos globalmente
+
+> 💡 La dependencia `nodemon` instala un 'Demonio' (Un servicio que corre en segundo plano en el sistema), este se encargará de detectar los cambios que hagamos en un archivo y actualizar el puerto en `localhost` automaticamente
 
 $ `npm install --force <pkg>` | `npm install -f <pkg>`:
-	Instala el paquete de manera forzada y fuerza a que sea el último recurso o versión desde el servidor de NPM.
+
+Instala el paquete de manera forzada y fuerza a que sea el último recurso o versión desde el servidor de NPM.
 
 $ `npm install <pkg> --dry-run`:
-	Simula la instalación de una dependencia, mostrandonos su output como si estuviese intalandolo, pero sin hacerlo.
+
+Simula la instalación de una dependencia, mostrandonos su output como si estuviese intalandolo, pero sin hacerlo.
 
 $ `npm install <pkg>@<version>`:
-	Instala una versión en específico de un paquete.
+
+Instala una versión en específico de un paquete.
 
 
 ### Instalar dependencias a partir de `package.json`
@@ -119,14 +133,18 @@ Tan solo escribes `npm install` o `npm i` y se instalarán según el contenido d
 
 ## Actualizar paquetes
 $ `npm outdate`:	 	Mostrará los paquetes que están desactualizados y las ultimás versiones disponibles.
+
 $ `npm outdate --dd`:	Para ver un output más detallado.
+
 $ `npm update`:		 	Actualizar los paquetes que no están en la ultima versión.
+
 $ `npm install <pkg>@latest`: Actualizar un paquete especifico
 
 
 
 ## Eliminar paquetes
 $ `npm uninstall <pkg>`:	Eliminando el paquete del `package.json` y del directorio `node_modules`.
+
 $ `npm uninstall <pkg> --no-save`: Eliminando **solamente** del directorio `node_modules`.
 
 
@@ -143,7 +161,7 @@ El versionado de paquetes está conformado por tres valores:
 * **Minor**: el valor que muestra la versión que contiene los cambios en funcionalidades, pero no representan un cambio significativo
 * **Patch**: el valor que muestra la versión que contiene cambios rápidos para solucionar problemas de seguridad o bugs
 
-![Versionado de paquetes](https://static.platzi.com/media/user_upload/wheelbarrel-no-tilde-caret-white-bg-w1000-72ca1a72-4c7f-4abe-8482-425c01a72f89.jpg)
+	![Versionado de paquetes](https://static.platzi.com/media/user_upload/wheelbarrel-no-tilde-caret-white-bg-w1000-72ca1a72-4c7f-4abe-8482-425c01a72f89.jpg)
 
 
 ### Símbolos ^ y ~ para actualizar las versiones minor y patch

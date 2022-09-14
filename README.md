@@ -6,14 +6,14 @@ El archivo package.json es un archivo de configuración que contiene la informac
 
 El archivo `package.json` estaría estructurado inicialmente por las siguientes propiedades:
 
-`name`:			nombre del proyecto.
-`version`:		versión del proyecto.
-`description`:	breve descripción sobre el proyecto.
-`main`:			archivo principal del proyecto.
-`scripts`:		comandos de ejecución del proyecto.
-`keywords`:		palabras clave del proyecto.
-`author`:		nombre y correo electrónico del creato/propietario del proyecto.
-`license`:		licencia del proyecto.
+* **name**:		 	nombre del proyecto.
+* **version**:	 	versión del proyecto.
+* **description**:	breve descripción sobre el proyecto.
+* **main**:		 	archivo principal del proyecto.
+* **scripts**:	 	comandos de ejecución del proyecto.
+* **keywords**:	 	palabras clave del proyecto.
+* **author**:		nombre y correo electrónico del creato/propietario del proyecto.
+* **license**:	 	licencia del proyecto.
 
 
 
@@ -78,19 +78,19 @@ Tan solo escribes `npm install` o `npm i` y se instalarán según el contenido d
 * Usando **caret**:
 
 	```json
-		{
-		  "dependencies": {
-		    "moment": "^2.29.4"
-		  },
-		  "devDependencies": {
-		    "date-fns": "^2.29.2",
-		    "nodemon": "^2.0.19",
-		    "webpack": "^5.74.0"
-		  },
-		  "optionalDependencies": {
-		    "eslint": "^8.23.1"
-		  }
-		}
+	{
+	  "dependencies": {
+	    "moment": "^2.29.4"
+	  },
+	  "devDependencies": {
+	    "date-fns": "^2.29.2",
+	    "nodemon": "^2.0.19",
+	    "webpack": "^5.74.0"
+	  },
+	  "optionalDependencies": {
+	    "eslint": "^8.23.1"
+	  }
+	}
 	```
 
 	El caret hace referencia a que los paquetes se instalarán a una versión más reciente, esto puede romper el funcionamiento del proyecto. Por ejemplo, si alguién clona un repositorio y quiere instalar las dependencias del proyecto, puede que obtenga errores al tener paquetes con versiones diferentes de las que se uso para crear el proyecto.
@@ -98,19 +98,19 @@ Tan solo escribes `npm install` o `npm i` y se instalarán según el contenido d
 * Sin usar **caret**:
 
 	```json
-		{
-		  "dependencies": {
-		    "moment": "2.29.4"
-		  },
-		  "devDependencies": {
-		    "date-fns": "2.29.2",
-		    "nodemon": "2.0.19",
-		    "webpack": "5.74.0"
-		  },
-		  "optionalDependencies": {
-		    "eslint": "8.23.1"
-		  }
-		}
+	{
+	  "dependencies": {
+	    "moment": "2.29.4"
+	  },
+	  "devDependencies": {
+	    "date-fns": "2.29.2",
+	    "nodemon": "2.0.19",
+	    "webpack": "5.74.0"
+	  },
+	  "optionalDependencies": {
+	    "eslint": "8.23.1"
+	  }
+	}
 	```
 
 	Al quitar el caret, se instalarán las mismas versiones que se ven en el archivo `package`, así  que el proyecto funcionará de igual manera para quién lo haga y para otra persona que también lo utilice.
@@ -160,12 +160,12 @@ Existen dos símbolos que acompañan a este versionado, que sirven para actualiz
 * `>=`  : Versión mayor o igual a la indicada.
 
 ```json
-	"dependencies": {
-	    "json-server": ">0.15.1",
-	    "moment": ">=2.26.0",
-	    "date-fns": "<2.14.0",
-	    "express": "<=4.17.3"
-	}
+"dependencies": {
+    "json-server": ">0.15.1",
+    "moment": ">=2.26.0",
+    "date-fns": "<2.14.0",
+    "express": "<=4.17.3"
+}
 ```
 
 

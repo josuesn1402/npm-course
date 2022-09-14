@@ -20,5 +20,17 @@
   "bugs": {
     "url": "https://github.com/josueSN1402/npm-course/issues"
   },
-  "homepage": "https://github.com/josueSN1402/npm-course#readme"
+  "homepage": "https://github.com/josueSN1402/npm-course#readme",
+  "dependencies": {
+    "json-server": "0.15.0",
+    "moment": "2.29.4"
+  },
+  "devDependencies": {
+    "date-fns": "2.29.2",
+    "nodemon": "2.0.19",
+    "webpack": "5.74.0"
+  },
+  "optionalDependencies": {
+    "eslint": "^8.23.1"
+  }
 }

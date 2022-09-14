@@ -112,3 +112,16 @@ Tan solo escribes `npm install` o `npm i` y se instalarán según el contenido d
 	Al quitar el caret, se instalarán las mismas versiones que se ven en el archivo `package`, así  que el proyecto funcionará de igual manera para quién lo haga y para otra persona que también lo utilice.
 
 
+## Actualizar paquetes
+$ `npm outdate`:	 	Mostrará los paquetes que están desactualizados y las ultimás versiones disponibles.
+$ `npm outdate --dd`:	Para ver un output más detallado.
+$ `npm update`:		 	Actualizar los paquetes que no están en la ultima versión.
+$ `npm install <pkg>@latest`: Actualizar un paquete especifico
+
+
+## Eliminar paquetes
+$ `npm uninstall <pkg>`:	Eliminando el paquete del `package.json` y del directorio `node_modules`.
+$ `npm uninstall <pkg> --no-save`: Eliminando **solamente** del directorio `node_modules`.
+
+
+

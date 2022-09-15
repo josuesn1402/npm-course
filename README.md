@@ -220,7 +220,7 @@ Se ejecutan usando `npm run <script-name>`.
 
 [Fuente](https://platzi.com/comentario/883390/)
 
-```
+```bash
 $ npm run start
 $ npm run build
 $ npm run deploy
@@ -255,6 +255,61 @@ Para ello, sólo tenemos que escribir `npx ntl`
 > NOTA: para problemas de webkpack al ejecutar `build` o `start`:  
 >* Revisar este repo: https://github.com/webpack/webpack/issues/14532  
 >* O probar este comando: `export NODE_OPTIONS=--openssl-legacy-provider`
+
+
+
+## Solución de problemas
+Alguno de los errores que pueden ocurrir son:
+
+* Errores en la configuración del archivo `package.json`
+* Errores del sistema operativo
+* Configuración errónea de Git o GitHub
+* Errores ortográficos (typos)
+* O errores que no estén ligados directamente a NPM
+
+
+### Mostrar detalles del comando ejecutado
+Para identificar el error que puede existir en tu proyecto, es necesario analizar cada paso que ejecuta un comando, para saber qué o en dónde ocurre el problema.
+
+El flag `--dd` en un comando de NPM, te mostrará de manera verbosa cada paso que se ejecuta. De esta manera podrás observar si existe un error para solucionarlo.
+
+```bash
+npm [comand] --dd
+```
+
+Para poder activar la opción de verbose (es decir que nos muestre mayor información de lo que esta haciendo el comando)
+
+```bash
+npm run [comando] --dd
+```
+
+[Fuente](https://platzi.com/comentario/1188608/)
+
+
+Otra forma, es ejecutar el comando de NPM. Si existe un error, la terminal te mostrará los diferentes errores que encontró. Al final de este resumen, existirá una ruta con los detalles del error, lo puedes abrir para observar los pasos que ejecutó NPM.
+
+[error](https://cdn.document360.io/da52b302-22aa-4a71-9908-ba18e68ffee7/Images/Documentation/npm03.PNG)
+
+
+### Error en node_modules
+Uno de los problemas que podemos toparnos, es que nuestros archivos de `node_moduls` no estén correctamente instalados o tengamos una versión anterior.
+
+$ `npm cache clean -f` | `npm cache clean --force`: Borra el cache de npm.
+
+$ `npm cache verify`: Muestra la cantidad de cache existente, podemos cercioraros de si ya fue eliminado.
+
+$ `npm ci`: es como hacer `rm -rf node_modules` y `npm i` en un solo paso, lo que haces es un `clean install` o `instalacion limpia`. 
+[Fuente](https://platzi.com/comentario/2223998/) - [Documentación](https://docs.npmjs.com/cli/v8/commands/npm-ci)
+
+
+#### Paquetes que podemos usar para elimar node_modules de manera más segura
+* [rimraf](https://github.com/isaacs/rimraf)
+* [npkill](https://github.com/voidcosmos/npkill)
+
+
+
+
+
 
 
 

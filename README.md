@@ -288,7 +288,7 @@ npm run [comando] --dd
 
 Otra forma, es ejecutar el comando de NPM. Si existe un error, la terminal te mostrará los diferentes errores que encontró. Al final de este resumen, existirá una ruta con los detalles del error, lo puedes abrir para observar los pasos que ejecutó NPM.
 
-[error](https://cdn.document360.io/da52b302-22aa-4a71-9908-ba18e68ffee7/Images/Documentation/npm03.PNG)
+![Error](https://cdn.document360.io/da52b302-22aa-4a71-9908-ba18e68ffee7/Images/Documentation/npm03.PNG)
 
 
 ### Error en node_modules

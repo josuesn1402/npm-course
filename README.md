@@ -308,6 +308,25 @@ $ `npm ci`: es como hacer `rm -rf node_modules` y `npm i` en un solo paso, lo qu
 
 
 
+## Seguridad en proyectos con NPM
+La seguridad de tu proyecto puede ser vulnerada por paquetes desactualizados, ya que estas inseguridades son resueltas en versiones minor o patch. Al momento de instalar tus paquetes con el comando npm install puede mostrar advertencias (NPM WARN) de las dependencias desactualizadas.
+
+### Auditar tus dependencias
+$ `npm audit`:	Mestra una descripción de las dependencias instaladas, si se encuentran vulnerabilidades, se calculará el impacto al proyecto.
+
+$ `npm update <pkg> --depth <level>`: 
+
+Una ves sepamos cual es la vulnerabilidad podemos proceder a actualizar cualquiera de los paquetes. 
+
+Por ejemplo: `npm update eslint-utils --depth 2` esto para instalar todas sus dependencias.
+
+$ `npm audit fix`: Proporciona una actualización de los paquetes, similar al comando `npm update <pkg>`. 
+
+$ `npm audit --json`: Muestra un informe detallado en formato JSON .
+
+También hay una herramienta que garantiza que estemos siempre actualizados con nuestras dependencias del proyecto y es [snyk.io](https://snyk.io)
+
+[Fuente](https://platzi.com/comentario/1894552/)
 
 
 

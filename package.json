@@ -28,7 +28,7 @@
   "devDependencies": {
     "date-fns": "2.29.2",
     "nodemon": "2.0.19",
-    "webpack": "5.74.0"
+    "webpack": "5.94.0"
   },
   "optionalDependencies": {
     "eslint": "^8.23.1"

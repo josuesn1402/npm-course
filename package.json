@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/josueSN1402/npm-course#readme",
   "dependencies": {
-    "express": "4.17.3",
+    "express": "4.21.0",
     "moment": "2.29.4"
   },
   "devDependencies": {
